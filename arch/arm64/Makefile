@@ -174,13 +174,14 @@ zinstall install:
 %.dtb: scripts $(DRVGEN_FILE_LIST)
 	$(Q)$(MAKE) $(build)=$(boot)/dts $(boot)/dts/$@
 
-PHONY += dtbs dtbs_install
+#PHONY += dtbs dtbs_install
 
-dtbs: prepare scripts dtbo_check
-	$(Q)$(MAKE) $(build)=$(boot)/dts
 
-dtbs_install:
-	$(Q)$(MAKE) $(dtbinst)=$(boot)/dts
+#dtbs: prepare scripts dtbo_check
+	#$(Q)$(MAKE) $(build)=$(boot)/dts
+
+#dtbs_install:
+	#$(Q)$(MAKE) $(dtbinst)=$(boot)/dts
 
 Image-dtb: vmlinux scripts dtbs
 	echo "Andy"
